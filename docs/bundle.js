@@ -5,11 +5,12 @@ const html = `
 
 const style = `
   :host {
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 10px;
+    padding: 10px;
   }
 
   :not(.active) {
@@ -99,7 +100,9 @@ const style = `
   }
 
   #indicator-circles {
-    height: 100px;
+    background: red;
+    right: 0;
+    position: absolute;
   }
 `
 

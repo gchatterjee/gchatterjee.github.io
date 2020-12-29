@@ -46,7 +46,9 @@ const style = `
   }
 
   #indicator-circles {
-    height: 100px;
+    background: red;
+    right: 0;
+    position: absolute;
   }
 `
 
