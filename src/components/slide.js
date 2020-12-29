@@ -9,15 +9,19 @@ const style = `
   :host {
     text-align: center;
     flex: 1;
-    width: 100%;
     height: 100%;
-    transition: opacity 1s;
+    width: 100%;
+    transition: opacity 1s, visibility 0s 1s;
+    visibility: hidden;
+    overflow: hidden;
 
     position: fixed;
     opacity: 0;
   }
 
   :host(.current-slide) {
+    visibility: visible;
+    transition: opacity 1s, visibiility 0s 1s;
     opacity: 100%;
   }
 

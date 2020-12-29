@@ -4,7 +4,7 @@
   "description": "Gaurav Chatterjee's personal website",
   "main": "index.js",
   "scripts": {
-    "build": "mkdir -p build && cp src/index.html build/index.html && cp src/index.css build/index.css && browserify src/index.js -o build/bundle.js",
+    "build": "cp src/index.html index.html && cp src/index.css index.css && browserify src/index.js -o bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
