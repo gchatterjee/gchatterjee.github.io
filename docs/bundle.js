@@ -13,7 +13,7 @@ const style = `
     padding: 10px;
   }
 
-  :not(.active) {
+  div.circle:not(.active) {
     opacity: 50%;
   }
 `
@@ -32,7 +32,7 @@ class IndicatorCircles extends HTMLElement {
   renderIndicatorCircles() {
     const currentIndicator = parseInt(this.getAttribute('number'), 10)
     const circles = [...new Array(parseInt(this.getAttribute('of'), 10))].map(
-      (_, i) => `<div${i === currentIndicator ? ' class="active"' : ''}>&bull;</div>`
+      (_, i) => `<div class="circle${i === currentIndicator ? ' active' : ''}">&bull;</div>`
     )
     this.shadowRoot.querySelector('#circles-container').innerHTML = circles.join('')
   }
