@@ -1,0 +1,13 @@
+html {
+  height: 300%;
+}
+
+body {
+  margin: 0; /* override */
+}
+
+#slide-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
