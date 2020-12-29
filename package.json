@@ -22,9 +22,6 @@
   },
   "homepage": "https://github.com/gchatterjee/gchatterjee.github.io#readme",
   "devDependencies": {
-    "@webpack-cli/init": "^1.1.0",
-    "browserify": "^17.0.0",
-    "webpack": "^5.11.1",
-    "webpack-cli": "^4.3.0"
+    "browserify": "^17.0.0"
   }
 }
