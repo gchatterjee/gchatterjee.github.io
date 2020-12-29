@@ -1,9 +1,3 @@
-const registerSlide = require('./components/slide')
-const registerIndicatorCircles = require('./components/indicator-circles')
-
-registerSlide()
-registerIndicatorCircles()
-
 function setVisibleSlide() {
   const windowHeight = window.innerHeight
   const yPosition = window.scrollY

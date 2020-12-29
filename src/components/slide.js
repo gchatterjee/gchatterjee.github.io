@@ -80,4 +80,4 @@ class Slide extends HTMLElement {
   }
 }
 
-module.exports = () => customElements.define('gchatterjee-slide', Slide)
+customElements.define('gchatterjee-slide', Slide)

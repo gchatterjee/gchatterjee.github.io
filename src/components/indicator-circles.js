@@ -48,4 +48,4 @@ class IndicatorCircles extends HTMLElement {
   }
 }
 
-module.exports = () => customElements.define('gchatterjee-indicator-circles', IndicatorCircles)
+customElements.define('gchatterjee-indicator-circles', IndicatorCircles)
