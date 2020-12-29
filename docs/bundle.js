@@ -49,7 +49,7 @@ class IndicatorCircles extends HTMLElement {
   }
 }
 
-module.exports = () => customElements.define('gchatterjee-indicator-circles', IndicatorCircles)
+customElements.define('gchatterjee-indicator-circles', IndicatorCircles)
 
 },{}],2:[function(require,module,exports){
 const html = `
@@ -134,37 +134,10 @@ class Slide extends HTMLElement {
   }
 }
 
-module.exports = () => customElements.define('gchatterjee-slide', Slide)
+customElements.define('gchatterjee-slide', Slide)
 
 },{}],3:[function(require,module,exports){
-const registerSlide = require('./components/slide')
-const registerIndicatorCircles = require('./components/indicator-circles')
-
-registerSlide()
-registerIndicatorCircles()
-
-function setVisibleSlide() {
-  const windowHeight = window.innerHeight
-  const yPosition = window.scrollY
-  visibleSlide = Math.round(yPosition/(windowHeight))
-  const sections = [...document.querySelectorAll('gchatterjee-slide')]
-  sections.forEach((section, i) => {
-    if (i === visibleSlide) {
-      section.classList.add('current-slide')
-    } else {
-      section.classList.remove('uninitialized')
-      section.classList.remove('current-slide')
-    }
-  })
-}
-
-document.addEventListener('scroll', setVisibleSlide)
-window.addEventListener('resize', setVisibleSlide)
-const sections = [...document.querySelectorAll('gchatterjee-slide')]
-sections.forEach((section, i) => {
-  section.setAttribute('number', `${i}`)
-  section.setAttribute('of', `${sections.length}`)
-  section.classList.add(i === 0 ? 'current-slide' : 'uninitialized')
-})
+const slide = require('./components/slide')
+const indicatorCircles = require('./components/indicator-circles')
 
 },{"./components/indicator-circles":1,"./components/slide":2}]},{},[3]);
