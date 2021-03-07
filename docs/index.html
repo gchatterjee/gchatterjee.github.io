@@ -1,27 +1,212 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Gaurav Chatterjee</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"
+      data-auto-replace-svg="nest"
+    ></script>
+    <script type="text/javascript" src="index.js"></script>
   </head>
   <body>
-    <div id='slide-container'>
-      <gchatterjee-slide>
-        <div>
-          <h1 class="title">Gaurav Chatterjee</h1>
-          <h2 class="subtitle">FULL-STACK DEVELOPER</h2>
+    <gchatterjee-top-bar-page class="top-bar">
+      <gchatterjee-top-bar slot="top-bar">
+        <a
+          href="https://www.linkedin.com/in/gchatterjee"
+          target="_blank"
+          class="top-bar-link"
+        >
+          <div class="fab fa-linkedin"></div>
+          &nbsp;LinkedIn
+        </a>
+        <a
+          href="https://www.github.com/gchatterjee"
+          target="_blank"
+          class="top-bar-link"
+        >
+          <span class="fab fa-github"></span>&nbsp;GitHub
+        </a>
+        <a href="mailto:chatterjeegaur@gmail.com" class="top-bar-link">
+          <span class="fas fa-envelope"></span>&nbsp;Email
+        </a>
+      </gchatterjee-top-bar>
+    </gchatterjee-top-bar-page>
+    <section id="jumbotron">
+      <div class="title">Gaurav Chatterjee</div>
+      <div class="subtitle">FULL-STACK DEVELOPER</div>
+      <a class="down-arrow-container" href="#skills">
+        <div class="down-arrow">
+          <span class="fas fa-caret-down"></span>
         </div>
-      </gchatterjee-slide>
-      <gchatterjee-slide class="dark-mode">
-        <div>Coming Soon</div>
-      </gchatterjee-slide>
-      <gchatterjee-slide>
-        <div>Coming Soon</div>
-      </gchatterjee-slide>
-    </div>
-    <script type="text/javascript" src="index.js"></script>
+      </a>
+    </section>
+    <section id="skills">
+      <div class="content">
+        <h1>Skills</h1>
+        <div class="skill-category" id="languages">
+          <h2><span class="fas fa-code"></span>&nbsp;LANGUAGES</h2>
+          <div class="skill language" id="javascript">
+            <h3>JavaScript and TypeScript</h3>
+            I've used JavaScript and TypeScript extensively in a professional
+            setting for UI development and middleware.
+            <ul>
+              <li>
+                frontend frameworks including <strong>React</strong>,
+                <strong>Vue.js</strong>, <strong>Angular</strong>, and
+                <strong>Web Components</strong>
+              </li>
+              <li>
+                <strong>Node.js</strong>, including in the context of
+                <strong>WebSocket</strong>-based middleware and
+                <strong>RESTful API</strong>s
+              </li>
+              <li>
+                testing frameworks including <strong>Jest</strong>,
+                <strong>Cucumber.js</strong>, and <strong>Puppeteer</strong>
+              </li>
+            </ul>
+          </div>
+          <div class="skill language" id="python">
+            <h3>Python</h3>
+            I've used Python extensively in a professional setting in ETL
+            pipelines and in academic settings.
+            <ul>
+              <li>
+                data processing libraries, including <strong>pandas</strong> and
+                <strong>numpy</strong>
+              </li>
+              <li>
+                data consumption libraries, including
+                <strong>BeautifulSoup</strong> and <strong>requests</strong>
+              </li>
+              <li><strong>RESTful API</strong>s in <strong>Flask</strong></li>
+            </ul>
+          </div>
+          <div class="skill language" id="java">
+            <h3>Java</h3>
+            I've used Java in a professional setting in backend work.
+            <ul>
+              <li>
+                contribution of classes and methods to an existing codebase to
+                interface with lower level software
+              </li>
+            </ul>
+          </div>
+          <div class="skill language" id="groovy">
+            <h3>Groovy</h3>
+            I've used Groovy extensively in a professional setting in the
+            context of setting up CI/CD pipelines and writing libraries.
+            <ul>
+              <li>
+                <strong>Jenkinsfiles</strong> run <strong>CI/CD</strong> tasks,
+                including testing and deploying microservices
+              </li>
+              <li>
+                contributions to a Jenkins library for consumption by other
+                teams in the enterprise
+              </li>
+            </ul>
+          </div>
+          <div class="skill language" id="more">
+            <h3>More</h3>
+            I also have experience writing <strong>shell</strong> and
+            <strong>powershell</strong> scripts. I have some limited experience
+            with <strong>C</strong> and <strong>Go</strong>.
+          </div>
+        </div>
+        <hr />
+        <div class="skill-category">
+          <h2><span class="fas fa-laptop-code"></span>&nbsp;SOFTWARE</h2>
+          <div class="skill software">
+            <h3>Amazon Web Services (AWS)</h3>
+            I have an <a href="#certifications">AWS certification</a>, and I
+            have used AWS in a professional setting
+            <ul>
+              <li>
+                deployment of clusters of
+                <strong>Elastic Cloud Compute (EC2)</strong> instances for the
+                purpose of running end-to-end tests, with
+                <strong>security group</strong>s configured for access to
+                <strong>Simple Storage Service (S3)</strong>
+              </li>
+              <li>
+                <strong>CloudFormation</strong> templates for the purpose of
+                storing <strong>infrastructure as code</strong>
+              </li>
+              <li>
+                deployment of <strong>auto-scaling groups</strong> in multiple
+                regions with traffic managed by <strong>Route53</strong>
+              </li>
+            </ul>
+          </div>
+          <div class="skill software" id="more">
+            <h3>More</h3>
+            I have experience with monitoring and reporting tools, such as
+            <strong>Datadog</strong>, including setting up monitors with
+            <strong>Terraform</strong>, and <strong>NewRelic</strong>.
+          </div>
+        </div>
+      </div>
+      <a class="down-arrow-container" href="#experience">
+        <div class="down-arrow">
+          <span class="fas fa-caret-down"></span>
+        </div>
+      </a>
+    </section>
+    <section id="experience">
+      <div class="content">
+        <h1>Experience</h1>
+        [content coming soon]
+      </div>
+      <a class="down-arrow-container" href="#certifications">
+        <div class="down-arrow">
+          <span class="fas fa-caret-down"></span>
+        </div>
+      </a>
+    </section>
+    <section id="certifications">
+      <div class="content">
+        <h1>Certifications</h1>
+        <h2><span class="fab fa-amazon"></span>&nbsp;AMAZON</h2>
+        <h3>
+          Amazon Web Services (AWS) Certified Solutions Architect - Associate
+        </h3>
+        This certification can be verified on
+        <a href="" target="_blank">AWS's certification verification portal</a>
+        with credential ID <code>CP5TFH7CBJBE1NGN</code>.
+      </div>
+      <a class="down-arrow-container" href="#education">
+        <div class="down-arrow">
+          <span class="fas fa-caret-down"></span>
+        </div>
+      </a>
+    </section>
+    <section id="education">
+      <div class="content">
+        <h1>Education</h1>
+        <h2>
+          <span class="fas fa-graduation-cap"></span>&nbsp;CARNEGIE MELLON
+          UNIVERSITY
+        </h2>
+        <h3>B.S. in Civil Engineering, Minor in Computer Science</h3>
+      </div>
+      <a class="down-arrow-container" href="#personal">
+        <div class="down-arrow">
+          <span class="fas fa-caret-down"></span>
+        </div>
+      </a>
+    </section>
+    <section id="personal">
+      <div class="content">
+        <h1>Personal</h1>
+        [content coming soon]
+      </div>
+    </section>
   </body>
 </html>
