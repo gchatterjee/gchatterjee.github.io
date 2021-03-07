@@ -1,0 +1,148 @@
+$top-bar-color: black;
+$top-bar-height: 60px;
+$title-color: black;
+$subtitle-spacing: 0.5em;
+$fade-in-time: 1s;
+$fade-in-delay: 0.25s;
+$down-arrow-float-time: 2s;
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Open Sans', sans-serif;
+
+  body {
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn $fade-in-time forwards;
+
+    .top-bar {
+      background-color: $top-bar-color;
+      position: fixed;
+      z-index: 1;
+
+      .top-bar-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: white;
+        background-color: $top-bar-color;
+        transition: background-color 0.5s;
+        font-size: 16pt;
+      }
+
+      .top-bar-link:hover {
+        background-color: lighten($top-bar-color, 25%);
+      }
+    }
+
+    section {
+      position: relative;
+      min-height: calc(100vh - #{$top-bar-height});
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: $top-bar-height;
+      padding-bottom: $top-bar-height;
+      box-sizing: border-box;
+
+      h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 36pt;
+      }
+
+      h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 16pt;
+        letter-spacing: 0.25em;
+      }
+
+      h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 16pt;
+        margin-block-end: 0.5em;
+      }
+
+      ul {
+        margin-block-start: 0.5em;
+        margin-block-end: 0.5em;
+      }
+
+      .content {
+        width: 80vw;
+      }
+
+      .down-arrow-container {
+        width: 100%;
+        height: 2em;
+        text-align: center;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-size: 36pt;
+        opacity: 0;
+        animation: fadeIn $fade-in-time 3 * $fade-in-delay forwards;
+        box-sizing: border-box;
+
+        .down-arrow {
+          position: absolute;
+          animation: down-arrow-float $down-arrow-float-time 3 * $fade-in-delay
+            infinite;
+        }
+      }
+    }
+
+    #jumbotron {
+      min-height: 100vh;
+
+      .title {
+        font-size: 60pt;
+        font-family: 'Playfair Display', serif;
+        color: $title-color;
+        opacity: 0;
+        animation: fadeIn $fade-in-time $fade-in-delay forwards;
+        text-align: center;
+      }
+
+      .subtitle {
+        font-size: 24pt;
+        font-family: 'Playfair Display', sans-serif;
+        color: lighten($title-color, 25%);
+        letter-spacing: $subtitle-spacing;
+        padding-left: $subtitle-spacing;
+        opacity: 0;
+        animation: fadeIn $fade-in-time 2 * $fade-in-delay forwards;
+        text-align: center;
+      }
+
+      .down-arrow-container {
+        position: absolute;
+        bottom: 25vh;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes down-arrow-float {
+  0% {
+    top: 0.4em;
+  }
+  50% {
+    top: 0.6em;
+  }
+  100% {
+    top: 0.4em;
+  }
+}
