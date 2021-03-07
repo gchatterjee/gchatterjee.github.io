@@ -35,6 +35,6 @@
     "webpack-cli": "^4.5.0"
   },
   "dependencies": {
-    "@gchatterjee/component-library": "^1.0.3"
+    "@gchatterjee/component-library": "^1.0.4"
   }
 }

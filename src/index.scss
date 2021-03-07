@@ -16,11 +16,11 @@ html {
     animation: fadeIn $fade-in-time forwards;
 
     .top-bar {
-      background-color: $top-bar-color;
       position: fixed;
       z-index: 1;
 
       .top-bar-link {
+        background-color: $top-bar-color;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -30,6 +30,7 @@ html {
         transition: background-color 0.5s;
 
         h3 {
+          font-size: 16pt;
           font-weight: normal;
           margin: 0;
         }
