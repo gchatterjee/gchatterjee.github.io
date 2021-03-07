@@ -4,8 +4,9 @@
   "description": "Gaurav Chatterjee's personal website",
   "main": "index.js",
   "scripts": {
-    "build": "mkdir -p docs && cp src/index.* docs/ && browserify src/custom.js -o docs/bundle.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack && sass src/index.scss | postcss --use autoprefixer --output docs/index.css",
+    "develop": "concurrently 'webpack --watch' 'sass --watch src/index.scss docs/index.css'",
+    "lint": "prettier --write . && eslint --fix './**/*.js' && stylelint --fix './**/*.scss'"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,19 @@
   },
   "homepage": "https://github.com/gchatterjee/gchatterjee.github.io#readme",
   "devDependencies": {
-    "browserify": "^17.0.0"
+    "autoprefixer": "^9.8.6",
+    "concurrently": "^6.0.0",
+    "eslint-config-prettier": "^8.1.0",
+    "postcss-cli": "^8.3.1",
+    "prettier": "^2.2.1",
+    "sass": "^1.32.8",
+    "stylelint": "^13.11.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recommended": "^3.0.0",
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "@gchatterjee/component-library": "^1.0.3"
   }
 }
