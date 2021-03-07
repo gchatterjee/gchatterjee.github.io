@@ -1,5 +1,5 @@
 $top-bar-color: black;
-$top-bar-height: 60px;
+$top-bar-height: 2em;
 $title-color: black;
 $subtitle-spacing: 0.5em;
 $fade-in-time: 1s;
@@ -42,12 +42,7 @@ html {
       }
     }
 
-    section.active {
-      opacity: 100%;
-      transition: opacity 0;
-    }
-
-    section {
+    .section-container {
       position: relative;
       min-height: 100vh;
       display: flex;
@@ -57,65 +52,71 @@ html {
       padding-top: $top-bar-height;
       padding-bottom: $top-bar-height;
       box-sizing: border-box;
-      opacity: 0;
-      transition: opacity $fade-in-time $section-delay;
 
-      h1 {
-        font-family: 'Playfair Display', serif;
-        font-size: 36pt;
+      section.active {
+        opacity: 100%;
+        transition: opacity $fade-in-time $section-delay;
       }
 
-      h2 {
-        font-family: 'Playfair Display', serif;
-        font-size: 16pt;
-        letter-spacing: 0.25em;
-        margin-block-start: 2em;
-      }
-
-      h3 {
-        font-family: 'Playfair Display', serif;
-        font-size: 16pt;
-        margin-block-end: 0.5em;
-      }
-
-      a {
-        color: red;
-      }
-
-      ul {
-        margin-block-start: 0.5em;
-        margin-block-end: 0.5em;
-      }
-
-      .content {
-        width: 80vw;
-      }
-
-      .down-arrow-container {
-        width: 100%;
-        height: 2em;
-        text-align: center;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: black;
-        font-size: 36pt;
+      section {
         opacity: 0;
-        animation: fadeIn $fade-in-time 3 * $fade-in-delay forwards;
-        box-sizing: border-box;
+        transition: opacity 0s;
 
-        .down-arrow {
-          position: absolute;
-          animation: down-arrow-float $down-arrow-float-time 3 * $fade-in-delay
-            infinite;
+        h1 {
+          font-family: 'Playfair Display', serif;
+          font-size: 36pt;
+        }
+
+        h2 {
+          font-family: 'Playfair Display', serif;
+          font-size: 16pt;
+          letter-spacing: 0.25em;
+          margin-block-start: 2em;
+        }
+
+        h3 {
+          font-family: 'Playfair Display', serif;
+          font-size: 16pt;
+          margin-block-end: 0.5em;
+        }
+
+        a {
+          color: red;
+        }
+
+        ul {
+          margin-block-start: 0.5em;
+          margin-block-end: 0.5em;
+        }
+
+        .content {
+          width: 80vw;
+        }
+
+        .down-arrow-container {
+          width: 100%;
+          height: 2em;
+          text-align: center;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: black;
+          font-size: 36pt;
+          opacity: 0;
+          animation: fadeIn $fade-in-time 3 * $fade-in-delay forwards;
+          box-sizing: border-box;
+
+          .down-arrow {
+            position: absolute;
+            animation: down-arrow-float $down-arrow-float-time 3 *
+              $fade-in-delay infinite;
+          }
         }
       }
     }
 
     #jumbotron {
-      min-height: 100vh;
-
       .title {
         font-size: 60pt;
         font-family: 'Playfair Display', serif;
@@ -137,6 +138,7 @@ html {
       }
 
       .down-arrow-container {
+        left: 0;
         position: absolute;
         bottom: 25vh;
       }

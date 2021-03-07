@@ -1,2 +1,2 @@
-(()=>{const e=document.querySelectorAll("section");function o(){const o=window.innerHeight,t=window.scrollY;e.forEach((e=>{e.offsetTop<o+t&&e.offsetTop+e.offsetHeight>t||"jumbotron"===e.id?e.classList.add("active"):e.classList.remove("active")}))}window.addEventListener("load",o),document.addEventListener("scroll",o),window.addEventListener("resize",o)})();
+(()=>{const e=document.querySelectorAll("section");function n(){const n=window.innerHeight,t=window.scrollY;e.forEach((e=>{const{top:o,bottom:d}=e.getBoundingClientRect(),i=o+t<n+t&&d+t>t||"jumbotron"===e.id?"add":"remove";e.classList[i]("active")}))}window.addEventListener("load",n),document.addEventListener("scroll",n),window.addEventListener("resize",n)})();
 //# sourceMappingURL=postload.js.map

@@ -4,13 +4,15 @@ function setActiveSection() {
   const windowHeight = window.innerHeight
   const scrollAmount = window.scrollY
   sections.forEach(section => {
-    if (
-      (section.offsetTop < windowHeight + scrollAmount &&
-        section.offsetTop + section.offsetHeight > scrollAmount) ||
+    const { top, bottom } = section.getBoundingClientRect()
+    const sectionTop = top + scrollAmount
+    const sectionBottom = bottom + scrollAmount
+    const action = (
+      (sectionTop < windowHeight + scrollAmount &&
+        sectionBottom > scrollAmount) ||
       section.id === 'jumbotron'
-    )
-      section.classList.add('active')
-    else section.classList.remove('active')
+    ) ? 'add' : 'remove'
+    section.classList[action]('active')
   })
 }
 
