@@ -113,6 +113,28 @@ html {
               $fade-in-delay infinite;
           }
         }
+
+        .experience-category {
+          h2 {
+            display: flex;
+            justify-content: space-between;
+
+            .duration {
+              letter-spacing: 0;
+            }
+          }
+        }
+
+        .education-category {
+          h2 {
+            display: flex;
+            justify-content: space-between;
+
+            .duration {
+              letter-spacing: 0;
+            }
+          }
+        }
       }
     }
 

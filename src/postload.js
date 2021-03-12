@@ -7,11 +7,12 @@ function setActiveSection() {
     const { top, bottom } = section.getBoundingClientRect()
     const sectionTop = top + scrollAmount
     const sectionBottom = bottom + scrollAmount
-    const action = (
+    const action =
       (sectionTop < windowHeight + scrollAmount &&
         sectionBottom > scrollAmount) ||
       section.id === 'jumbotron'
-    ) ? 'add' : 'remove'
+        ? 'add'
+        : 'remove'
     section.classList[action]('active')
   })
 }
